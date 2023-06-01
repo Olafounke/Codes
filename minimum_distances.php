@@ -32,17 +32,3 @@ function minimumDistances($a) {
      return $d;
 }
 
-
-$fptr = fopen(getenv("OUTPUT_PATH"), "w");
-
-$n = intval(trim(fgets(STDIN)));
-
-$a_temp = rtrim(fgets(STDIN));
-
-$a = array_map('intval', preg_split('/ /', $a_temp, -1, PREG_SPLIT_NO_EMPTY));
-
-$result = minimumDistances($a);
-
-fwrite($fptr, $result . "\n");
-
-fclose($fptr);
